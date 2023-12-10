@@ -1,7 +1,5 @@
 ---
 import "../styles/style.css";
-import Button from "./Button.astro";
-const {kursus, pris, nyhed, imgPath} = Astro.props;
 ---
 
 <div class="kurserne">
@@ -10,7 +8,7 @@ const {kursus, pris, nyhed, imgPath} = Astro.props;
 		<p>Pris: 1950 kr</p>
 	</div>
 	<div class="bottom">
-        <Button />
+        <img src="/pic/kursus_dreje.webp" alt="Dreje kursus">
 	</div>
 </div>
 <style>
@@ -36,18 +34,37 @@ p{
     font-size: 5cqw;
     text-decoration: dotted;
 }
-.bottom{
-    background-image: url(/pic/kursus_dreje.webp);
+img{
     background-size: cover;
     width: 250px;
     height: 280px;
-    display: flex
-}
+    z-index: -1;
+    position: relative;
+    }
 .button{
     z-index: 1;
     background-color: var(--buttons);
     font-family: "margaretbold";
     font-size: 7cqw;
 
+}
+@media (min-width: 900px) {
+.top {
+    width: 350px;
+    padding: 6% 0% 0% 5%;
+}
+img{
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    }
+h3{
+    font-size: 2cqw;
+}
+
+p{
+    font-size: 1.5cqw;
+}
+}
 }
 </style>

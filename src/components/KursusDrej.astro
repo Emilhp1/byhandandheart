@@ -1,0 +1,53 @@
+---
+import "../styles/style.css";
+import Button from "./Button.astro";
+const {kursus, pris, nyhed, imgPath} = Astro.props;
+---
+
+<div class="kurserne">
+	<div class="top">
+		<h3>Drejekurser</h3>
+		<p>Pris: 1950 kr</p>
+	</div>
+	<div class="bottom">
+        <Button />
+	</div>
+</div>
+<style>
+
+.top{
+    width: 250px;
+    height: 170px;
+    background-color: var(--box_one);
+    padding: 6% 0% 0% 5%;
+}
+h3{
+    font-family: "margaretbold";
+    color: var(--text_off_white);
+    font-size: 7cqw;
+    margin-bottom: 7%;
+}
+p:before {
+    content:"• ";
+}
+p{
+    font-family: "Lato", sans-serif;
+    color: var(--text_off_white);
+    font-size: 5cqw;
+    text-decoration: dotted;
+}
+.bottom{
+    background-image: url(/pic/kursus_dreje.webp);
+    background-size: cover;
+    width: 250px;
+    height: 280px;
+    display: flex
+}
+.button{
+    z-index: 1;
+    background-color: var(--buttons);
+    font-family: "margaretbold";
+    font-size: 7cqw;
+
+}
+</style>

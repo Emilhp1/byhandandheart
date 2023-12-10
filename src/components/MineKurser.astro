@@ -1,28 +1,31 @@
 ---
 import "../styles/style.css";
+import KursusDrej from "./KursusDrej.astro";
 ---
 
 <section>
 	<h2>Mine kurser</h2>
 	<p>Skulle du have specielle ønsker til kurser eller arrangementer, er du meget velkommen til at kontakte mig på mail eller telefon</p>
 </section>
-
-<div class="kurserne">
-	<div>
-		<h3>Kursus</h3>
-		<p>Pris</p>
-	</div>
-	<div>
-		<h3>Nyhed</h3>
-		<a href="#">Bestil tid</a>
-	</div>
-</div>
-
+<KursusDrej />
 <style>
-    h2{
 
-    }
+section{
+    margin: 5% 0% 5% 3%;
+}
+h2{
+    font-family: "margaretbold";
+    color: var(--text_off_white);
+    font-size: 10cqw;
 
+}
+
+p{
+    color: var(--text_off_white); 
+    font-size: 4.5cqw;
+  
+}
     @media (min-width: 900px) {
+
     }
 </style>

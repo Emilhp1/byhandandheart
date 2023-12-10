@@ -1,7 +1,33 @@
 ---
 import Mainlayout from "../layouts/Mainlayout.astro";
+import "../styles/style.css";
+import Product from "../components/Product.astro"
+
+const data = await fetch("https://ipaooftiyaqtfqhhohfm.supabase.co/rest/v1/products", {
+	method:"GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlwYW9vZnRpeWFxdGZxaGhvaGZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIyMTQyNzcsImV4cCI6MjAxNzc5MDI3N30.LMc5S9Xmcy_gqPkbbMf9mi8s0uFVWV8GvDSpkfboWJk"
+	}
+}).then(res=>res.json())
+
+console.log(data)
 ---
 
 <Mainlayout>
+
+<section>
+    		  {
+        data.map((thing) => {
+          return <Product data={thing} />;
+        })
+      }
+</section>
 	
 </Mainlayout>
+
+<style>
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+</style>

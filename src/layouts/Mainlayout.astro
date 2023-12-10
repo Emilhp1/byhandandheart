@@ -1,28 +1,31 @@
 ---
-
+import "../styles/style.css";
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <header>
-            <nav>
-   <ul>
-            <li><a href="#">Hjem</a></li>
-            <li><a href="#">Om os</a></li>
-            <li><a href="#">Tjenester</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-            </nav>
-        </header>
-        <main>
-<h1>Astro</h1>
-        </main>
-	</body>
+<head>
+    <meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>By Hand and Heart</title>
+</head>
+<body>
+    <header>
+    <Navigation />
+    </header>
+<main>
+    <slot />
+</main>
+<footer>
+    <Footer />
+</footer>
+</body>
 </html>
+
+
+<style>
+    
+</style>

@@ -1,0 +1,38 @@
+---
+import "../styles/style.css";
+---
+<div class="grid_1-1">
+    <div class="text">
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ipsa nulla, praesentium perspiciatis dicta, ut voluptas hic quas accusantium debitis ipsam, velit expedita quasi? Veritatis vero dignissimos quisquam omnis aut!</p>
+</div>
+<div>
+<img src="/pic/HelleHegner3.webp" alt="Helle">
+</div>
+</div>
+
+<style>
+p{
+    margin: 5%;
+    background-color: #A49D8C;
+    padding:5%;
+}
+img{
+    width: 75%;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+    .grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+img{
+    width: 60%;
+}
+.text{
+    margin-top: 15%;
+}
+}
+</style>

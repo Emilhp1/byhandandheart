@@ -6,8 +6,10 @@ const {data} = Astro.props
     <div>
     <a href={`/speaker/${data.slug}`}>
 	<h3>{data.name}</h3>
+    <div class="desktop_price">
 	<p class="burning">{data.burning}</p>
 	<p class="price">{data.price} kr.</p>
+    </div>
     </a>
     </div>
 </article>
@@ -29,8 +31,24 @@ p:last-child{
 }
 
 @media (min-width: 900px) {
-.produkter{
-    width: 280px;
+img{
+    width: 300px;
     height: auto;
-}}
+}
+
+h3{
+font-size: 2.5cqw;
+}
+p:last-child{
+    margin-bottom: 10%;
+    font-size: 1.3cqw;
+}
+.desktop_price{
+    display: flex;
+    justify-content: space-between;
+        width: 300px;
+
+}
+
+}
 </style>

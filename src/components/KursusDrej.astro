@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Button from "./Button.astro";
 const {variant, kursus, pris, imgPath } = Astro.props;
 ---
 <div class="kurserne">
@@ -8,6 +9,9 @@ const {variant, kursus, pris, imgPath } = Astro.props;
 		<p>{pris}</p>
 	</div>
 	<div class="bottom">
+        <div>
+            <Button/>
+        </div>
         <img src={imgPath} alt="Dreje kursus">
 	</div>
 </div>

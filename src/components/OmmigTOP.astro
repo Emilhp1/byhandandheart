@@ -2,29 +2,100 @@
 import "../styles/style.css";
 ---
 <section>
-    <h1>Om Helle Hegner</h1>
-    <div>
-        <h2></h2>
-        	<h2>HELLE HEG <br> NER <br> UNIKA <br> KERAMIK <br> MED <br> HJERTE</h2>
+    
+    <div class="grid_2-1">
+      <div class="…">
+       <img src="/pic/HelleHegner.webp" alt="Helle">
     </div>
-    <div>
-        <img src="" alt="">
+
+    <div class="order">
+        	<h1>HELLE <br> HEGNER</h1> 
+                <div class="box">
+            <h2>UNIKA <br> KERAMIK <br> MED <br> HJERTE</h2>
     </div>
+</div>
+</div>
 </section>
 
 
 
 <style>
     h1{
-        font-family: margaretbold;
-        
+             color: var(--text_yellow);
+    font-family: "studio6extrabold";
+    font-size: 9cqw;
+    margin: 5% 0% 0% 2%;
+    letter-spacing: 2rem;
+    line-height: 65px;
     }
     h2{
          color: var(--text_yellow);
     font-family: "studio6extrabold";
     font-size: 9cqw;
-    margin: 20% 0% 0% 2%;
+    margin: 5% 0% 0% 2%;
     letter-spacing: 2rem;
     line-height: 65px;
     }
+    img{
+        margin-top: 25%;
+            width: 75%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+    .box{
+    background-color: #6C6145;
+    display: flex;
+    width: 100%;
+}
+@media (min-width: 900px) {
+        h1{
+        margin-top: 10%;
+        margin-left: 5%;
+        letter-spacing: 5rem;
+    line-height: 85px;
+        font-size: 4cqw;
+    margin: 2% 0% 0% 2%;
+    }
+
+.img{
+    z-index: -1;
+}
+        img{
+        margin-top: 14%;
+        height: 70%;
+        width: auto;
+             /* position: absolute;
+             left: 55%;
+             top: 20%;
+             z-index: -1; 
+             display: block; */
+    }
+    
+        .box{
+    background-color: #6C6145;
+    display: flex;
+    width: 100%;
+    height: 420px;
+}
+.grid_2-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+}
+
+   h2{
+    font-size: 4cqw;
+    margin: 2% 0% 0% 2%;
+       letter-spacing: 5rem;
+    line-height: 85px;
+    
+
+    }
+    
+    .order{
+        order: -1;
+        margin-top: 17%;
+    }
+}
+  
 </style>

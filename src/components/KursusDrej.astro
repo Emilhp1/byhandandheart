@@ -1,51 +1,55 @@
 ---
 import "../styles/style.css";
+const {variant, kursus, pris, imgPath } = Astro.props;
 ---
-
 <div class="kurserne">
-	<div class="top">
-		<h3>Drejekurser</h3>
-		<p>Pris: 1950 kr</p>
+	<div data-variant={variant} class="top">
+		<h3>{kursus}</h3>
+		<p>{pris}</p>
 	</div>
 	<div class="bottom">
-        <img src="/pic/kursus_dreje.webp" alt="Dreje kursus">
+        <img src={imgPath} alt="Dreje kursus">
 	</div>
 </div>
-<style>
 
+<style>
+.kurserne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .top{
-    width: 250px;
+    width: 300px;
     height: 170px;
-    background-color: var(--box_one);
     padding: 6% 0% 0% 5%;
 }
 h3{
-    font-family: "margaretbold";
-    color: var(--text_off_white);
-    font-size: 7cqw;
+    font-size: 8cqw;
     margin-bottom: 7%;
 }
 p:before {
     content:"• ";
 }
 p{
-    font-family: "Lato", sans-serif;
-    color: var(--text_off_white);
     font-size: 5cqw;
-    text-decoration: dotted;
 }
 img{
     background-size: cover;
-    width: 250px;
-    height: 280px;
-    z-index: -1;
+    width: 300px;
     position: relative;
     }
-.button{
-    z-index: 1;
-    background-color: var(--buttons);
-    font-family: "margaretbold";
-    font-size: 7cqw;
+.bottom{
+    margin-bottom: 10%;
+}
+[data-variant="one"]{
+    background-color: var(--box_one);
+}
+[data-variant="two"]{
+    background-color: var(--box_two);
+ 
+}
+[data-variant="three"]{
+    background-color: var(--box_three);
 
 }
 @media (min-width: 900px) {
@@ -70,7 +74,6 @@ h3{
 }
 
 p{
-    font-size: 1.5cqw;
-}
+    font-size: 1.5cqw;}
 }
 </style>

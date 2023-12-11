@@ -2,20 +2,35 @@
 const {data} = Astro.props
 ---
 <article>
-    <a href={`/speaker/${data.slug}`}>
 	<img src={`/product_pic/${data.image}`} alt="Produkt">
     <div>
+    <a href={`/speaker/${data.slug}`}>
 	<h3>{data.name}</h3>
 	<p class="burning">{data.burning}</p>
-	<p class="price">{data.price}</p>
+	<p class="price">{data.price} kr.</p>
     </a>
     </div>
 </article>
 
 
 <style>
-    img{
-        width: 280px;
-        height: auto;
-    }
+img{
+    width: 180px;
+    height: auto;
+}
+
+h3{
+    font-family: "margaretbold";
+    color: var(--text_off_white);
+
+}
+p{
+    color: var(--text_off_white);
+}
+
+@media (min-width: 900px) {
+.produkter{
+    width: 280px;
+    height: auto;
+}}
 </style>

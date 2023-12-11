@@ -2,6 +2,7 @@
 import Mainlayout from "../layouts/Mainlayout.astro";
 import "../styles/style.css";
 import Product from "../components/Product.astro"
+import ProduktsIntro from "../components/ProduktsIntro.astro";
 
 const data = await fetch("https://ipaooftiyaqtfqhhohfm.supabase.co/rest/v1/products", {
 	method:"GET",
@@ -14,8 +15,9 @@ console.log(data)
 ---
 
 <Mainlayout>
+<ProduktsIntro />
 
-<section>
+<section class="produkter">
     		  {
         data.map((thing) => {
           return <Product data={thing} />;
@@ -26,8 +28,15 @@ console.log(data)
 </Mainlayout>
 
 <style>
-    section{
+
+  .produkter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .produkter{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    }}
 </style>

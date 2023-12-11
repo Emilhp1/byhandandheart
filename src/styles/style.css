@@ -9,9 +9,7 @@
   --box_three: #bd9f6c;
   --footer: #483626;
   --trefork: #e5c8a1;
-
   /* Font sizes */
-  --header_text: 8rem;
 }
 * {
   margin: 0;
@@ -33,8 +31,17 @@
 }
 p {
   font-family: "Lato", sans-serif;
+  font-size: 5cqw;
+  color: var(--text_off_white);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "margaretbold";
+  color: var(--text_off_white);
+}
 a,
 li,
 ul {
@@ -50,5 +57,4 @@ body {
   background-image: url(/pic/background.webp);
   background-size: cover;
   /* background-attachment: fixed; */
-  max-width: auto;
 }

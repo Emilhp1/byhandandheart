@@ -58,3 +58,9 @@ body {
   background-size: cover;
   /* background-attachment: fixed; */
 }
+
+@media (min-width: 900px) {
+  p {
+    font-size: 1.5cqw;
+  }
+}

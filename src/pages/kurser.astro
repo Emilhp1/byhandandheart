@@ -1,9 +1,41 @@
 ---
 import "../styles/style.css";
 import Mainlayout from "../layouts/Mainlayout.astro";
+import KursusTop from "../components/KursusTop.astro";
+import KursusLeft from "../components/KursusLeft.astro";
+import KursusRight from "../components/KursusRight.astro";
 ---
 
 <Mainlayout>
+
+<KursusTop />
+
+<KursusLeft 
+variant="one";
+kursus="Modellerings- og pladeteknikkurser";
+times="2 mødegange af 4 og 3 timer";
+des="Det er også muligt at bruge drejeskiven, men jeg tilbyder ingen undervisning i dette på disse kurser.";
+des2="Priserne er inklusiv alle materiale, brænding, kaffe/the og snacks."; 
+deltager="Pris ved min 3 deltagere";
+pris="975 kr.";
+imgPath="/pic/kursus_plade.webp";
+/>
+
+<KursusRight />
+
+<KursusLeft 
+variant="three";
+kursus="Drejekurser";
+times="2 mødegange af 4 og 3 timer";
+des="Dette kursus laver jeg primært som soloundervisning.";
+des2="Er I to der gerne vil på drejekursus sammen koster den ekstra deltager kr. 975,- "; 
+des3="OBS: Der er kun en drejeskive i studiet. Hvis i er to kan den anden prøve kræfter med pladeteknik eller modellering."
+deltager="En person";
+pris="1950 kr.";
+deltager2="Ekstra deltager"
+pris2="975 kr."
+imgPath="/pic/kursus_dreje.webp";
+/>
 
 
 </Mainlayout>

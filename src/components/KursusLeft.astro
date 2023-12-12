@@ -1,23 +1,53 @@
 ---
 import "../styles/style.css";
+const {variant, kursus, times, des, des2, des3, deltager, pris, deltager2, pris2, imgPath} = Astro.props;
 ---
 
-<section>
-    <div>
-        <h2>Modellerings- og pladeteknikkurser</h2>
-        <h3>2 mødegange af 4 og 3 timer</h3>
-        <p>Det er også muligt at bruge drejeskiven, men jeg tilbyder ingen undervisning i dette på disse kurser.</p>
-        <p>Priserne er inklusiv alle materiale, brænding, kaffe/the og snacks.</p>
+<section class="kursus">
+    <article ata-variant={variant}>
+    <div class="text">
+        <h2>{kursus}</h2>
+        <h3>{times}</h3>
+        <p>{des}</p>
+        <p>{des2}</p>
+        <p>{des3}</p>
         <div>
-            <h4>Pris ved min 3 deltagere</h4>
-            <h4>975 kr.</h4>
+            <h4>{deltager}</h4>
+            <h4>{pris}</h4>
+        </div>
+        <div>
+            <h4>{deltager2}</h4>
+            <h4>{pris2}</h4>
         </div>
     </div>
-    <div>
-        <img src="" alt="">
+    <div class="img">
+        <img src={imgPath} alt="">
     </div>
+    </article>
 </section>
 
 <style>
-    
+
+[data-variant="one"]{
+    background-color: var(--box_one);
+}
+
+[data-variant="three"]{
+    background-color: var(--box_three);
+}
+img{
+width: 150px;
+height: auto;
+}
+
+
+@media (min-width: 900px) {
+.kursus{
+    display: flex;
+}
+img{
+    width: 250px;
+    height: auto;
+} 
+}
 </style>

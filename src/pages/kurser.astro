@@ -2,15 +2,14 @@
 import "../styles/style.css";
 import Mainlayout from "../layouts/Mainlayout.astro";
 import KursusTop from "../components/KursusTop.astro";
-import KursusLeft from "../components/KursusLeft.astro";
-import KursusRight from "../components/KursusRight.astro";
+import KursusDescription from "../components/KursusDescription.astro";
 ---
 
 <Mainlayout>
 
 <KursusTop />
 
-<KursusLeft 
+<KursusDescription 
 variant="one";
 kursus="Modellerings- og pladeteknikkurser";
 times="2 mødegange af 4 og 3 timer";
@@ -20,15 +19,24 @@ deltager="Pris ved min 3 deltagere";
 pris="975 kr.";
 imgPath="/pic/kursus_plade.webp";
 />
-
-<KursusRight />
-
-<KursusLeft 
+<KursusDescription 
+variant="two";
+kursus="Lav din egen kop";
+times="2 mødegange af 3 og 2 timer";
+des="På dette kursus lærer du at lave din egen kop.";
+des2="Vi mødes over to omgange, hvor du ved første kursus gang former din kop."; 
+des3="Anden kursusgang pynter og glasere du din kop."
+deltager="Pris ved en person";
+pris="800 kr.";
+order="order"
+imgPath="/pic/kursus_kop.webp";
+/>
+<KursusDescription 
 variant="three";
 kursus="Drejekurser";
 times="2 mødegange af 4 og 3 timer";
 des="Dette kursus laver jeg primært som soloundervisning.";
-des2="Er I to der gerne vil på drejekursus sammen koster den ekstra deltager kr. 975,- "; 
+des2="Er I to der gerne vil på drejekursus sammen koster den ekstra deltager 975 kr. "; 
 des3="OBS: Der er kun en drejeskive i studiet. Hvis i er to kan den anden prøve kræfter med pladeteknik eller modellering."
 deltager="En person";
 pris="1950 kr.";
@@ -36,6 +44,4 @@ deltager2="Ekstra deltager"
 pris2="975 kr."
 imgPath="/pic/kursus_dreje.webp";
 />
-
-
 </Mainlayout>

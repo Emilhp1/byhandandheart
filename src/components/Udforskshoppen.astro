@@ -9,16 +9,22 @@ import Button from "./Button.astro";
         variant="two"
         text="Gå til shop"
     />
-    <img class="hide" src="/pic/4.jpg" alt="">
-    <div class="grid_1-1">
-    <img src="/pic/5.jpg" alt="">
-    <img src="/pic/6.jpg" alt="">
+<div class="grid_1-13">
+    <div class="venstre">
+    <img class="hide order" src="/pic/4.jpg" alt="">
+        <div class="grid_1-12">
+            <img src="/pic/6.jpg" alt="">
+            <img src="/pic/5.jpg" alt="">
+        </div>
     </div>
-    <div class="grid_1-12">
-        <img src="/pic/6.jpg" alt="">
-        <img src="/pic/5.jpg" alt="">
+    <div class="hojre">
+        <div class="grid_1-12">
+            <img src="/pic/6.jpg" alt="">
+            <img src="/pic/5.jpg" alt="">
+        </div>
+        <img class="hide" src="/pic/4.jpg" alt="">
     </div>
-    <img class="hide" src="/pic/4.jpg" alt="">
+</div>
 </div>
  
     
@@ -26,13 +32,40 @@ import Button from "./Button.astro";
 
 
 <style>
+    img{
+    width: 100%;
+    height: auto;
+}
 .container{
     position: relative;
 }
 .udforsk{
-    margin: 2%;
+    margin: 5%;
 }
 
+@media (min-width: 900px) {
+
+.order{
+    margin-bottom: 1%;
+}
+
+.grid_1-13{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+}
+.grid_1-12{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    margin-bottom: 2%;
+}
+
+}
 @media (max-width: 900px) {
 .hide{
     display: none;
@@ -62,5 +95,4 @@ button{
     font-size: 3cqw;
 }
 }
-
 </style>

@@ -1,3 +1,64 @@
 ---
 import "../styles/style.css";
+import Button from "./Button.astro";
 ---
+<section class="udforsk">
+        <h2>Udforsk mit seneste keramik</h2>
+<div class="container">
+    <Button
+        variant="two"
+        text="Gå til shop"
+    />
+    <img class="hide" src="/pic/4.jpg" alt="">
+    <div class="grid_1-1">
+    <img src="/pic/5.jpg" alt="">
+    <img src="/pic/6.jpg" alt="">
+    </div>
+    <div class="grid_1-12">
+        <img src="/pic/6.jpg" alt="">
+        <img src="/pic/5.jpg" alt="">
+    </div>
+    <img class="hide" src="/pic/4.jpg" alt="">
+</div>
+ 
+    
+</section>
+
+
+<style>
+.container{
+    position: relative;
+}
+.udforsk{
+    margin: 2%;
+}
+
+@media (max-width: 900px) {
+.hide{
+    display: none;
+}
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+}
+.grid_1-12{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:3%;
+    margin-top: 3%;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+button{
+    bottom: 200px;
+    right: -55px;
+    padding: 5%;
+    font-size: 3cqw;
+}
+}
+
+</style>

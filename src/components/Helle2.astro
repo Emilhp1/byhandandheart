@@ -3,43 +3,55 @@ import "../styles/style.css";
 ---
 <div class="grid_1-1">
     <div class="text">
-<p>Logoet “Treforken”
-Du kan altid kende min keramik på den lille trefork logo der er under alle mine produkter. <br>
-
-På den måde er du sikker på der er tale om en original Helle Hegner</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ipsa nulla, praesentium perspiciatis dicta, ut voluptas hic quas accusantium debitis ipsam, velit expedita quasi? Veritatis vero dignissimos quisquam omnis aut!</p>
 </div>
-<div class="order">
-	<img class="logo_svg" src="/logos/logo_trident.svg" alt="Trefork logo">
-    </div>
+<div>
+<img src="/pic/HelleHegner3.webp" alt="Helle">
+</div>
 </div>
 
 <style>
+.text{
+    background-color: var(--box_three);
+    margin: 5% 6% 5% 6%;
+    padding: 5%;
+    filter: drop-shadow(6px 4px 5px #00000069);
+
+}
 p{
-    margin: 5%;
-   background-color:#BD9F6C ; 
-   padding: 5%;
+    margin: 6% 0% 0% 1%;
+    line-height: 27px;
+}
+p:last-child {
+margin-bottom: 6%;
 }
 img{
-    width: 50%;
-display: block;
-  margin-left: auto;
-  margin-right: auto;
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(6px 4px 5px #00000069);
 }
 
 @media (min-width: 900px) {
-      .grid_1-1{
+.grid_1-1{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-      }
-      img{
-    width: 40%;
-    opacity: 70%;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4%;
 }
-.order{
-    order: -1;
+img{
+    width: 60%;
+    height: auto;
+    margin-left: 3%;
 }
 .text{
-    margin-top: 15%;
+    margin: 0% 10% 0% 13%;
+    padding: 5%;
+}
+p{
+    margin: 6% 0% 0% 2%;
+    line-height: 30px;
 }
 }
 </style>

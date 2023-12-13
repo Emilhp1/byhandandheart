@@ -1,8 +1,6 @@
 ---
 import "../styles/style.css";
-import KursusDrej from "./KursusDrej.astro";
-import KursusKop from "./KursusKop.astro";
-import KursusPlade from "./KursusPlade.astro";
+import KursusTicket from "./KursusTicket.astro";
 ---
 
 <section>
@@ -10,21 +8,21 @@ import KursusPlade from "./KursusPlade.astro";
 	<p>Skulle du have specielle ønsker til kurser eller arrangementer, er du meget velkommen til at kontakte mig på mail eller telefon</p>
 </section>
 <section class="courses">
-<KursusDrej 
+<KursusTicket 
 variant="one";
 kursus="Drejekurser";
 pris="Pris: 1950 kr.";
 imgPath="/pic/kursus_dreje.webp";
 />
 
-<KursusDrej 
+<KursusTicket 
 variant="two";
 kursus="Lav din egen kop";
 pris="Pris: 850 kr.";
 imgPath="/pic/kursus_kop.webp";
 />
 
-<KursusDrej 
+<KursusTicket 
 variant="three";
 kursus="Modellering og pladeteknik";
 pris="Pris: 975 kr.";

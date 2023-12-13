@@ -12,7 +12,7 @@ const {variant, kursus, pris, imgPath } = Astro.props;
         <div>
             <Button/>
         </div>
-        <img src={imgPath} alt="Dreje kursus">
+        <img src={imgPath} alt="Kursus billeder">
 	</div>
 </div>
 
@@ -21,6 +21,7 @@ const {variant, kursus, pris, imgPath } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: drop-shadow(4px 2px 5px #00000069);
 }
 .top{
     width: 300px;
@@ -40,9 +41,10 @@ p{
 img{
     background-size: cover;
     width: 300px;
-    position: relative;
+    z-index: -1;
     }
 .bottom{
+    position: relative;
     margin-bottom: 10%;
 }
 [data-variant="one"]{
@@ -54,10 +56,8 @@ img{
 }
 [data-variant="three"]{
     background-color: var(--box_three);
-
 }
 @media (min-width: 900px) {
-
 .kurserne{
     display: flex;
     flex-direction: column;

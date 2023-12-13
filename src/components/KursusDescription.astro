@@ -1,0 +1,148 @@
+---
+import "../styles/style.css";
+const {variant, kursus, times, des, des2, des3, deltager, pris, deltager2, pris2, imgPath, order} = Astro.props;
+---
+
+<section class="kursus">
+    <article data-variant={variant}>
+    <div class="text">
+        <h2>{kursus}</h2>
+        <h3>{times}</h3>
+        <p>{des}</p>
+        <p>{des2}</p>
+        <p>{des3}</p>
+        <div class="pris_1">
+            <h4>{deltager}</h4>
+            <h4>{pris}</h4>
+        </div>
+        <div class="pris_2">
+            <h4>{deltager2}</h4>
+            <h4>{pris2}</h4>
+        </div>
+    </div>
+        <img data-variant={order} src={imgPath} alt="Kursus billede">
+    </article>
+</section>
+
+<style>
+
+.kursus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(4px 2px 5px #00000069);
+    padding: 6% 0% 6% 0%;
+}
+[data-variant="one"]{
+    background-color: var(--box_one);
+    margin: 2% 8% 2% 8%;
+}
+[data-variant="two"]{
+    background-color: var(--box_two);
+    margin: 2% 8% 2% 8%;
+}
+[data-variant="three"]{
+    background-color: var(--box_three);
+    margin: 2% 8% 2% 8%;
+}
+img{
+width: 328px;
+height: auto;
+}
+.text{
+    padding: 2% 2% 2% 2%;
+}
+h2{
+    font-size: 7.2cqw;
+    padding: 0% 0% 6% 2%;
+}
+
+h3{
+    font-size: 4.7cqw;
+    padding: 0% 0% 0% 2%;
+}
+
+h4{
+    font-size: 4.7cqw;
+}
+p{
+    font-size: 4.4cqw;
+    padding: 4% 2% 2% 2%;
+}
+
+.pris_1{
+    display: flex;
+    justify-content: space-between;
+    padding: 8% 4% 4% 2%;
+}
+.pris_2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 4% 3% 2%;
+}
+
+@media (min-width: 900px) {
+.kursus{
+    padding: 0%;
+
+}
+article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img{
+    width: 645px;
+    height: auto;
+}
+.text{
+    padding: 3% 0% 0% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+h2{
+    font-size: 3.8cqw;
+    padding: 0% 0% 6% 2%;
+}
+
+h3{
+    font-size: 2.3cqw;
+    padding: 0% 0% 0% 2%;
+}
+
+h4{
+    font-size: 2cqw;
+}
+p{
+    font-size: 1.7cqw;
+    padding: 4% 2% 2% 2%;
+}
+
+.pris_1{
+    display: flex;
+    justify-content: space-between;
+    padding: 8% 4% 4% 2%;
+}
+.pris_2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 4% 3% 2%;
+}
+[data-variant="one"]{
+    background-color: var(--box_one);
+    margin: 2% 5% 2% 5%;
+}
+[data-variant="two"]{
+    background-color: var(--box_two);
+    margin: 2% 5% 2% 5%;
+}
+[data-variant="three"]{
+    background-color: var(--box_three);
+    margin: 2% 5% 2% 5%;
+}
+[data-variant="order"]{
+order: -1;
+}
+}
+</style>

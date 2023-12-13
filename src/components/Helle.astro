@@ -5,7 +5,9 @@ import "../styles/style.css";
 
 <div class="grid_1-1">
     <div class="text">
-<p>Mit navn er Helle Hegner og jeg har altid elsket at arbejde med mine hænder, og fordybe mig i materialer og form. Jeg er oprindeligt uddannet grafisk designer fra Danmarks Designskole. Jeg arbejdede i den grafiske branche i så mange år, at jeg begyndte at ryge ud af ørene, så jeg valgte at sige mit job op og blive selvstændig. Jeg har arbejdet med keramik i snart 15 år, og haft eget værksted de sidste 9 år.</p>
+<p>Mit navn er Helle Hegner og jeg har altid elsket at arbejde med mine hænder, og fordybe mig i materialer og form.</p>
+<p>Jeg er oprindeligt uddannet grafisk designer fra Danmarks Designskole. Jeg arbejdede i den grafiske branche i så mange år, at jeg begyndte at ryge ud af ørene, så jeg valgte at sige mit job op og blive selvstændig.</p>
+<p>Jeg har arbejdet med keramik i snart 15 år, og haft eget værksted de sidste 9 år.</p>
 </div>
 <div class="order">
 <img src="/pic/HelleHegner2.webp" alt="Helle">
@@ -15,35 +17,54 @@ import "../styles/style.css";
 
 
 <style>
-p{
-    margin: 5%;
-    background-color: #6C6145;
+.text{
+    background-color: var(--box_two);
+    margin: 5% 6% 5% 6%;
     padding: 5%;
+    filter: drop-shadow(6px 4px 5px #00000069);
+
+}
+
+p{
+    margin: 6% 0% 0% 1%;
+    line-height: 27px;
+
+}
+p:last-child {
+margin-bottom: 6%;
 }
 img{
     width: 75%;
+    height: auto;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(6px 4px 5px #00000069);
+
 }
 
 @media (min-width: 900px) {
-section{
-    margin-top: 10%;
-    
-}
+
 .grid_1-1{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4%;
+    
 }
 .order{
     order: -1;
 }
 img{
     width: 60%;
+    height: auto;
 }
 .text{
-    margin-top: 15%;
+    margin: 0% 20% 0% 3%;
+    padding: 5%;
+}
+p{
+    margin: 6% 0% 0% 2%;
+    line-height: 30px;
 }
 }
 

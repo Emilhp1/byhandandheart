@@ -3,54 +3,197 @@ import "../styles/style.css";
 ---
 
 <footer>
-    <div>
-        <h3>KATEGORIER</h3>
-        <p>Keramikkurser</p>
-        <p>Vaser</p>
-        <p>Krus</p>
-        <p>Skåle</p>
-        <p>Kander</p>
-        <p>Se andet</p>
+    <section class="text_footer">
+    <div class="section1">
+    <div class="adresse">
+        <h3>ADRESSE</h3>
+        <p>Hovedgaden 2-4 <br> 2. sal</p>
+        <p>3460 Birkerød</p>
     </div>
-    <div>
+    <div class="kontakt">
         <h3>KONTAKT</h3>
         <p>Telefon: +45 25 391 391</p>
         <p>Email: contact.byhandandheart.dk</p>
         <p>CVR: 31247837</p>
         <p>Bank: Sydbank 6748 1196177</p>
     </div>
-</div>
-<div>
-    <h3>ADRESSE</h3>
-    <p>Hovedgaden 2-4 2. sal</p>
-    <p>3460 Birkerød</p>
-</div>
+    </div>
+    <div class="kategorier">
+        <h3>KATEGORIER</h3>
+        <a href="/index">Forside</a>
+        <a href="/kurser">Kurser</a>
+        <a href="/produkter">Produkter</a>
+        <a href="/ommig">Om mig</a>
+    </div>
 <div>
     <div class="socials">
-        <h3>BYHANDANDHEART</h3>
-        <h3>SOCIALE</h3>
-        <a href="https://www.instagram.com/UXCopenhagen/"><img src="/logos/instagram.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/uxcopenhagen"><img src="/logos/facebook.svg" alt="facebook"></a>
+        <div class="socials_text">
+            <h3>BYHANDANDHEART</h3>
+            <h3>SOCIALS</h3>
+        </div>
+        <div class="socialsimg">
+            <a href="https://www.instagram.com/UXCopenhagen/"><img src="/logos/instagram.svg" alt="instagram"></a>
+            <a href="https://www.facebook.com/uxcopenhagen"><img src="/logos/facebook.svg" alt="facebook"></a>
+        </div>
+        <img class="logo" src="/logos/logo_hand.svg" alt="By Hand and Heart logo">
     </div>
-    <img src="/logos/logo_hand.svg" alt="By Hand and Heart logo">
+    </section>
 </footer>
 
 
 <style>
 footer {
+    background-color: var(--footer);
+    padding: 7% 5% 7% 5%;
+    margin: 0px;
+}
+
+.text_footer{
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+
+.kategorier{
+    display: flex;
+    flex-direction: column;
+    padding: 7% 5% 7% 5%;
+}
+.kategorier h3 {
+    font-size: 4cqw;
+}
+.kategorier a {
+    font-family: "Lato", sans-serif;
+    color: var(--text_off_white);
+    font-size: 4.2cqw;
+    line-height: 27px;
+}
+
+.kategorier a:before {
+    content:"• ";
+    padding-right: 4%;
+}
+
+.kontakt{
+  padding: 7% 5% 7% 5%; 
+}
+.kontakt h3 {
+font-size: 4cqw;
+padding-bottom: 2%; 
+}
+.kontakt p {
+font-size: 4.2cqw;
+line-height: 27px;
+
+}
+.adresse{
+  padding: 7% 5% 7% 5%; 
+}
+.adresse h3 {
+font-size: 4cqw;
+padding-bottom: 2%; 
+
+}
+.adresse p {
+font-size: 4.2cqw;
+line-height: 27px;
+}
+.socials{
+  padding: 7% 5% 7% 5%; 
+}
+.socials h3 {
+    font-size: 4cqw;
+    padding-bottom: 4%; 
+}
+.socials_text{
+    padding-bottom: 10%;
+}
+.socials a{
+    padding-right: 30%;
+}
+.socialsimg {
+    display: flex;
+    width: 40px;
+}
+.logo{
+    display: flex;
+    align-self: end;
+    width: 85%;
+    padding: 7% 10% 3% 0%;
+}
+@media (min-width: 900px) {
+footer {
   display: flex;
   flex-direction: column;
   background-color: var(--footer);
-  padding: 2rem 0px 2rem 0px;
-  margin: 0px;
-  gap: 20%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 2% 3% 2% 3%;
 }
 
-.div 
+.text_footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-@media (max-width: 900px){
+.kategorier{
+    display: flex;
+    flex-direction: column;
+    padding: 7% 5% 7% 5%;
+}
+.kategorier h3 {
+    font-size: 1.7cqw;
+}
+.kategorier a {
+    font-size: 1.5cqw;
+    line-height: 40px;
+}
 
+.kategorier a:before {
+    content:"• ";
+    padding-right: 2%;
+}
+
+.kontakt{
+  padding: 7% 5% 7% 5%; 
+}
+.kontakt h3 {
+font-size: 1.7cqw;
+padding-bottom: 2%; 
+}
+.kontakt p {
+    font-size: 1.5cqw;
+    line-height: 35px;
+}
+.adresse{
+  padding: 7% 5% 7% 5%; 
+}
+.adresse h3 {
+    font-size: 1.7cqw;
+    padding-bottom: 2%; 
+}
+.adresse p {
+    font-size: 1.5cqw;
+    line-height: 35px;
+}
+.socials{
+    padding: 7% 5% 7% 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.socials h3 {
+    font-size: 1.7cqw;
+    padding-bottom: 1%; 
+}
+.socials_text{
+    padding-bottom: 2%;
+}
+.socialsimg {
+    width: 80px;
+    display: flex;
+    align-self: center;
+}
+.logo{
+    width: 70%;
+    padding: 10% 2% 0% 0%;
+}
 }
 </style>

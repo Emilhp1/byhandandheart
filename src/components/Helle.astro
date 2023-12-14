@@ -10,7 +10,10 @@ import "../styles/style.css";
 <p>Jeg har arbejdet med keramik i snart 15 år, og haft eget værksted de sidste 9 år.</p>
 </div>
 <div class="order">
-<img src="/pic/HelleHegner2.webp" alt="Helle">
+<picture>
+    <source srcset="/pic/HelleHegner2.webp" media="(min-width: 900px)">
+    <img src="/pic/HelleHegner2-mb.webp" alt="Helle Hegner igen" width="293" height="387" loading="lazy" decoding="async">
+</picture>
 </div>
 </div>
 </section>
@@ -34,8 +37,8 @@ p:last-child {
 margin-bottom: 6%;
 }
 img{
-    width: 75%;
-    height: auto;
+    width: 293px;
+    height: 387px;
     display: block;
     margin-left: auto;
     margin-right: auto;

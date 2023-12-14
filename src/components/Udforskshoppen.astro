@@ -13,14 +13,26 @@ import Button from "./Button.astro";
     <div class="venstre">
     <img class="hide order" src="/pic/GL3.webp" alt="">
         <div class="grid_1-12">
-            <img src="/pic/GL4.webp" alt="">
-            <img src="/pic/GL1.webp" alt="">
+            <picture>
+                <source srcset="/pic/GL4.webp" media="(min-width: 40em)">
+                <img src="/pic/GL4_mobil.webp" alt="Krukke med låg" width="190" height="143" loading="lazy" decoding="async">
+            </picture>
+            <picture>
+            <source srcset="/pic/GL1.webp" media="(min-width: 40em)">
+                <img src="/pic/GL1_mobil.webp" alt="Vase" width="190" height="143" loading="lazy" decoding="async">
+            </picture>
         </div>
     </div>
     <div class="hojre">
         <div class="grid_1-12">
-            <img src="/pic/GL5.webp" alt="">
-            <img src="/pic/GL2.webp" alt="">
+            <picture>
+                <source srcset="/pic/GL5.webp" media="(min-width: 40em)">
+                <img src="/pic/GL5_mobil.webp" alt="Krukke med låg" width="190" height="143" loading="lazy" decoding="async">
+            </picture>
+            <picture>
+                <source srcset="/pic/GL2.webp" media="(min-width: 40em)">
+                <img src="/pic/GL2_mobil.webp" alt="Vase" width="190" height="143" loading="lazy" decoding="async">
+            </picture>
         </div>
         <img class="hide" src="/pic/GL6.webp" alt="">
     </div>

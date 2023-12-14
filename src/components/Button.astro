@@ -1,10 +1,10 @@
 ---
 import "../styles/style.css";
-const {variant, text} = Astro.props
+const {variant, text, linkto} = Astro.props
 ---
 
 <div data-variant={variant}>
-    <a href="/kurser">{text}</a>
+    <a href={linkto}>{text}</a>
 </div>
 
 <style>

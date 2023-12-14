@@ -10,7 +10,7 @@ const {variant, kursus, times, des, des2, des3, deltager, pris, deltager2, pris2
         <h3>{times}</h3>
         <p>{des}</p>
         <p>{des2}</p>
-        <p>{des3}</p>
+        <p class="bottom_text">{des3}</p>
         <div class="pris_1">
             <h4>{deltager}</h4>
             <h4>{pris}</h4>
@@ -93,17 +93,18 @@ article{
 }
 img{
     width: 645px;
-    height: auto;
+    height: 645px;
 }
 .text{
     padding: 3% 0% 0% 3%;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
+    height: 645px;
 }
 h2{
     font-size: 3.8cqw;
-    padding: 0% 0% 6% 2%;
+    padding: 0% 0% 4% 2%;
 }
 
 h3{
@@ -116,13 +117,16 @@ h4{
 }
 p{
     font-size: 1.7cqw;
-    padding: 4% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+}
+.bottom_text{ 
+padding-bottom: 4%;
 }
 
 .pris_1{
     display: flex;
     justify-content: space-between;
-    padding: 8% 4% 4% 2%;
+    padding: 0% 4% 4% 2%;
 }
 .pris_2{
     display: flex;
@@ -132,14 +136,17 @@ p{
 [data-variant="one"]{
     background-color: var(--box_one);
     margin: 2% 5% 2% 5%;
+    height: 645px;
 }
 [data-variant="two"]{
     background-color: var(--box_two);
     margin: 2% 5% 2% 5%;
+    height: 645px;
 }
 [data-variant="three"]{
     background-color: var(--box_three);
-    margin: 2% 5% 6% 5%;
+    margin: 2% 5% 6% 5%;    
+    height: 645px;
 }
 [data-variant="order"]{
 order: -1;
